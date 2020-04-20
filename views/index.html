@@ -65,7 +65,8 @@
             type: 'get',
             data: $('#convertForm').serialize(),
             success: function(data) {
-              $('#result').text(data.string || data);
+                // TODO : read result and display to HTML
+              $('#result').text(data.error || data.toString);
               $('#jsonResult').text(JSON.stringify(data));
             }
           });
